@@ -8,6 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 
 
 import utilities.PageUtility;
+import utilities.WaitUtilities;
 
 public class AdminPage {
 	
@@ -49,6 +50,8 @@ public class AdminPage {
 	}
 	
 	public void clickTheCreateButton() {
+		WaitUtilities waitutilities = new WaitUtilities();
+		waitutilities.waitForElement(driver, create_button);
 		create_button.click();
 	}
 	
