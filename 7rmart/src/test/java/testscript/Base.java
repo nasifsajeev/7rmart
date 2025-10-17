@@ -22,6 +22,7 @@ public class Base {
 	Properties properties;
 	FileInputStream fileinputstream;
 	WebDriver driver;
+	
 	@BeforeMethod(alwaysRun=true)
 	@Parameters("browser")
 	public void browserInitialization(String browser) throws Exception {

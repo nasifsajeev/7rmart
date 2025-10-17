@@ -13,14 +13,11 @@ import utilities.FakerUtility;
 public class AdminTest extends Base{
 	
 	
-	@Test(retryAnalyzer =retry.Retry.class)
+	@Test(retryAnalyzer =retry.Retry.class,groups = "regression")
 	public void verifyTheUserIsAbleToCreateNewUsers() throws IOException {
-//		String username = "admin";
-//		String password = "admin";
+
 		String username = ExcelUtilities.getStringDate(1, 0, "login_page");
 		String password = ExcelUtilities.getStringDate(1, 1, "login_page");
-//		String newuser = "Ameen1";
-//		String newpassword = "badusha123";
 		
 		FakerUtility fakerutility = new FakerUtility();
 		String newuser = fakerutility.creatARandomFirstName();

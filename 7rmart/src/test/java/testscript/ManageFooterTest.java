@@ -14,14 +14,9 @@ public class ManageFooterTest extends Base{
 	@Test
 	public void verifyTheUserIsAbleToManageTheFooterText() throws IOException {
 		
-//		String username = "admin";
-//		String password = "admin";
 		String username = ExcelUtilities.getStringDate(1, 0, "login_page");
 		String password = ExcelUtilities.getStringDate(1, 1, "login_page");
 		
-//		String address = "Nasif villa";
-//		String email = "thoufeek@gamil.com";
-//		String phonenumber = "7356150572";
 		String address = ExcelUtilities.getStringDate(1, 1, "footer_page");
 		String email = ExcelUtilities.getStringDate(2, 1, "footer_page");
 		String phonenumber = ExcelUtilities.getIntegerData(3, 1, "footer_page");
