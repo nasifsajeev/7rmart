@@ -5,6 +5,7 @@ import java.io.IOException;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import constants.Constant;
 import pages.ContactPage;
 import pages.LoginPage;
 import utilities.ExcelUtilities;
@@ -39,7 +40,7 @@ public class ContactTest extends Base{
 		contactpage.updateContactInformation();
 		
 		boolean alert = contactpage.isAlertShown();
-		Assert.assertTrue(alert);
+		Assert.assertTrue(alert,Constant.UPDATECONTACT);
 	}
 	
 

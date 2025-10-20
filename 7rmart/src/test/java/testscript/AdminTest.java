@@ -1,10 +1,12 @@
 package testscript;
 
 import java.io.IOException;
+import java.lang.invoke.ConstantBootstraps;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import constants.Constant;
 import pages.AdminPage;
 import pages.LoginPage;
 import utilities.ExcelUtilities;
@@ -36,7 +38,7 @@ public class AdminTest extends Base{
 		adminpage.selectTheUserType();
 		adminpage.clickTheCreateButton();
 		boolean alertmessage = adminpage.isAlertShown();
-		Assert.assertTrue(alertmessage);
+		Assert.assertTrue(alertmessage,Constant.ADDADMIN_USER);
 	}
 
 }
